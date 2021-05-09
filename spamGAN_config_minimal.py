@@ -62,7 +62,7 @@ linear_decay_pg_weights = True # Place more importance on initial sentence rewar
 
 # Context configs
 prior_prob=0.5 # probability of class 1 in generated/unlabeled data.
-noise_size=10 # dim of noise vector
+#noise_size=10 # dim of noise vector
 
 
 # Training tweaks
@@ -322,7 +322,7 @@ g_decoder_hparams = {
                 "output_keep_prob": 0.5,
                 "state_keep_prob": 1.0,
                 "variational_recurrent": True,
-                "input_size": [emb_hparams['dim'] + noise_size + 1,
+                "input_size": [emb_hparams['dim'] + 1,
                                1024]
             },
             "residual": False,
